@@ -1,0 +1,78 @@
+[
+  {
+    "id": "SS-0012",
+    "title": "Fasilitas toilet rusak",
+    "category": "Fasilitas Sekolah",
+    "description": "Toilet di lantai 2 rusak, pintunya tidak bisa ditutup dan airnya tidak mengalir dengan baik. Mohon segera diperbaiki, terima kasih.",
+    "location": "Toilet lantai 2, dekat ruang 12A",
+    "studentName": "Fira Putri",
+    "studentClass": "XII IPA 1",
+    "photo": "",
+    "status": "Diproses",
+    "createdAt": "2025-09-12T02:24:00.000Z",
+    "updates": [
+      { "title": "Pengaduan diterima", "detail": "Pengaduan kamu telah diterima oleh admin.", "at": "2025-09-12T02:24:00.000Z" },
+      { "title": "Sedang diproses", "detail": "Tim sarana sedang menindaklanjuti pengaduan ini.", "at": "2025-09-12T04:05:00.000Z" }
+    ],
+    "messages": []
+  },
+  {
+    "id": "SS-0011",
+    "title": "Lampu kelas mati",
+    "category": "Fasilitas Sekolah",
+    "description": "Beberapa lampu di kelas tidak menyala sejak minggu lalu.",
+    "location": "Ruang XII IPA 1",
+    "studentName": "Fira Putri",
+    "studentClass": "XII IPA 1",
+    "photo": "",
+    "status": "Selesai",
+    "createdAt": "2025-09-10T01:30:00.000Z",
+    "updates": [
+      { "title": "Pengaduan diterima", "detail": "Pengaduan kamu telah diterima oleh admin.", "at": "2025-09-10T01:30:00.000Z" },
+      { "title": "Selesai", "detail": "Lampu kelas sudah diganti oleh petugas.", "at": "2025-09-11T03:10:00.000Z" }
+    ],
+    "messages": []
+  },
+  {
+    "id": "SS-0010",
+    "title": "Kebersihan lingkungan",
+    "category": "Lingkungan Sekolah",
+    "description": "Tempat sampah di area kantin sering penuh sebelum jam pulang.",
+    "location": "Kantin sekolah",
+    "studentName": "Fira Putri",
+    "studentClass": "XII IPA 1",
+    "photo": "",
+    "status": "Diproses",
+    "createdAt": "2025-09-08T03:15:00.000Z",
+    "updates": [{ "title": "Pengaduan diterima", "detail": "Pengaduan kamu telah diterima oleh admin.", "at": "2025-09-08T03:15:00.000Z" }],
+    "messages": []
+  },
+  {
+    "id": "SS-0009",
+    "title": "Jaringan internet lambat",
+    "category": "Administrasi",
+    "description": "Koneksi internet di perpustakaan sulit digunakan untuk mencari materi belajar.",
+    "location": "Perpustakaan",
+    "studentName": "Fira Putri",
+    "studentClass": "XII IPA 1",
+    "photo": "",
+    "status": "Selesai",
+    "createdAt": "2025-09-05T05:40:00.000Z",
+    "updates": [{ "title": "Selesai", "detail": "Router perpustakaan telah diperiksa.", "at": "2025-09-07T05:40:00.000Z" }],
+    "messages": []
+  },
+  {
+    "id": "SS-0008",
+    "title": "Guru tidak hadir",
+    "category": "Guru & Pembelajaran",
+    "description": "Kelas belum mendapat informasi pengganti saat guru berhalangan hadir.",
+    "location": "Ruang XII IPA 1",
+    "studentName": "Fira Putri",
+    "studentClass": "XII IPA 1",
+    "photo": "",
+    "status": "Selesai",
+    "createdAt": "2025-09-03T01:00:00.000Z",
+    "updates": [{ "title": "Selesai", "detail": "Jadwal pengganti sudah dibagikan oleh wali kelas.", "at": "2025-09-03T02:30:00.000Z" }],
+    "messages": []
+  }
+]
