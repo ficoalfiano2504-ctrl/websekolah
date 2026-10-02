@@ -4,7 +4,6 @@ import {
   ClipboardList,
   FileText,
   Home,
-  Megaphone,
   TrendingUp,
 } from 'lucide-react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'

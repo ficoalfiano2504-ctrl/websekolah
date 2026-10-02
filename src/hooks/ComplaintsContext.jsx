@@ -3,6 +3,7 @@ import {
   createComplaint as createComplaintRequest,
   getComplaints,
   sendComplaintMessage,
+  updateComplaintStatus as updateComplaintStatusRequest,
 } from '../services/api.js'
 
 const ComplaintsContext = createContext(null)
@@ -50,6 +51,13 @@ export function ComplaintsProvider({ children }) {
     return result
   }
 
+  async function updateComplaintStatus(id, status) {
+    const result = await updateComplaintStatusRequest(id, status)
+    setComplaints((current) => current.map((item) => item.id === result.id ? result : item))
+    setToast(`Status pengaduan diperbarui menjadi ${result.status}.`)
+    return result
+  }
+
   const value = {
     complaints,
     loading,
@@ -63,6 +71,7 @@ export function ComplaintsProvider({ children }) {
     refreshComplaints,
     submitComplaint,
     submitMessage,
+    updateComplaintStatus,
   }
 
   return <ComplaintsContext.Provider value={value}>{children}</ComplaintsContext.Provider>

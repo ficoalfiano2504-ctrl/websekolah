@@ -13,6 +13,14 @@ export function getComplaint(id) {
   return request(`/api/complaints/${id}`, undefined, 'Pengaduan tidak ditemukan.')
 }
 
+export function updateComplaintStatus(id, status) {
+  return request(`/api/complaints/${id}/status`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ status }),
+  }, 'Status pengaduan gagal diperbarui.')
+}
+
 export function createComplaint(formData) {
   return request('/api/complaints', {
     method: 'POST',

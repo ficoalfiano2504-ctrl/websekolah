@@ -21,6 +21,7 @@ export default function DetailPengaduan() {
   const { id } = useParams()
   const location = useLocation()
   const navigate = useNavigate()
+  const isAdminView = location.pathname.startsWith('/admin/')
   const initialComplaint = location.state?.complaint?.id === id ? location.state.complaint : null
   const [complaint, setComplaint] = useState(initialComplaint)
   const [loading, setLoading] = useState(!initialComplaint)
@@ -62,7 +63,7 @@ export default function DetailPengaduan() {
 
   function goBack() {
     setStatusFilter('Semua')
-    navigate('/pengaduan')
+    navigate(isAdminView ? '/admin' : '/pengaduan')
   }
 
   if (!complaint) {
@@ -73,7 +74,7 @@ export default function DetailPengaduan() {
 
   return (
     <div className="detail-page">
-      <div className="page-heading"><button className="back-button" onClick={goBack} aria-label="Kembali"><ArrowLeft size={17} /></button><div><span className="eyebrow">PENGADUAN SAYA / {complaint.id}</span><h1>Detail Pengaduan</h1><p>Pantau perkembangan dan tanggapan untuk laporanmu.</p></div></div>
+      <div className="page-heading"><button className="back-button" onClick={goBack} aria-label="Kembali"><ArrowLeft size={17} /></button><div><span className="eyebrow">{isAdminView ? 'ANTREAN ADMIN' : 'PENGADUAN SAYA'} / {complaint.id}</span><h1>Detail Pengaduan</h1><p>{isAdminView ? 'Tinjau detail dan riwayat tindak lanjut pengaduan.' : 'Pantau perkembangan dan tanggapan untuk laporanmu.'}</p></div></div>
       <div className="detail-layout">
         <div className="detail-main">
           <section className="panel detail-summary"><div className="detail-title-row"><CategoryIcon category={complaint.category} /><div><span className="detail-id">#{complaint.id}</span><h2>{complaint.title}</h2><span className="detail-category">{complaint.category} <i /> {formatDate(complaint.createdAt)}</span></div><StatusPill status={complaint.status} /></div><div className="detail-divider" /><span className="field-label">Isi Pengaduan</span><p className="detail-description">{complaint.description}</p><div className="detail-meta"><span><UserRound size={14} /> {complaint.studentName} · {complaint.studentClass}</span><span><ArrowDownLeft size={14} /> {complaint.location}</span></div>{complaint.photo && <div className="proof-photo"><span className="field-label">Foto Bukti</span><img src={complaint.photo} alt="Foto bukti pengaduan" /></div>}</section>
