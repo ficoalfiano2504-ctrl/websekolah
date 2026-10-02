@@ -168,6 +168,10 @@ app.use((error, _request, response, _next) => {
   response.status(500).json({ message: 'Terjadi kesalahan pada server.' })
 })
 
-app.listen(port, () => {
-  console.log(`SuaraSiswa API berjalan di http://localhost:${port}`)
-})
+if (process.env.VERCEL !== '1') {
+  app.listen(port, () => {
+    console.log(`SuaraSiswa API berjalan di http://localhost:${port}`)
+  })
+}
+
+export default app
